@@ -1,4 +1,4 @@
-const {Schema, model } = require('mongoose');
+const {Schema} = require('mongoose');
 
 function timeSince(date) {
     return  new Date(date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
@@ -7,7 +7,7 @@ function timeSince(date) {
 const reactionSchema = new Schema({
     reactionId: {
         type: Schema.Types.ObjectId,
-        default: () => new Types.ObjectId();
+        default: () => new Types.ObjectId()
     },
     reactionBody: {
         type: String,
